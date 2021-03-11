@@ -1,0 +1,56 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Sharedmobility History - Stationen</title>
+    <meta name="description" content="Historical data of sharedmobility open data">
+    <meta name="author" content="Kenny Floria">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.css?v=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+
+</head>
+
+<body>
+    <div id="containerStationSelect">
+        <select id="selectProvider"></select>
+        <span id="dataSource">Diese Seite nutzt <a href="https://opendata.swiss/en/dataset/standorte-und-verfugbarkeit-von-shared-mobility-angeboten">Shared Mobility Daten</a>, die vom Bundesamt für Energie zur Verfügung gestellt werden.</span>
+    </div>
+    <div id="contentContainer">
+        <div id="mapContainer"></div>
+        <div id="chartContainer">
+            <div id="chartHeader">
+                <div>
+                    <h2 id="stationName">Station name</h2> <svg xmlns="http://www.w3.org/2000/svg" id="btnClose"
+                        width="28" height="28" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </div>
+                <button id="btnDay" class="btn-radio" value="86400">Letzter Tag</button>
+                <button id="btn7Days" class="btn-radio active" value="604800">Letzte 7 Tage</button>
+                <button id="btnMonth" class="btn-radio" value="2592000">Letzte 30 Tage</button>
+                <button id="btnMax" class="btn-radio" value="max">Max</button>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/timeChart.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+    <script src="js/map.js"></script>
+    <script src="js/com.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

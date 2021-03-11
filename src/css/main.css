@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+button {
+    border: 0;
+    padding: 4px 12px 4px 12px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.btn-radio.active {
+    background-color: darkgray;
+}
+
+.btn-radio:focus {
+    outline: none;
+}
+
+#dataSource {
+    margin-top: 0.5vh;
+    float: right;
+    font-size: smaller;
+}
+#stationName {
+    margin-bottom: 0.2em;
+    margin-top: 0.2em;
+    display: inline-block;
+}
+
+#btnClose {
+    cursor: pointer;
+}
+
+#containerStationSelect {
+    height: 4vh;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+#selectProvider {
+    height: 100%;
+}
+
+#contentContainer {
+    height: 96vh;
+    box-sizing: border-box;
+}
+
+#mapContainer {
+    transition: height 0.2s ease-out;
+    height: 100%;
+}
+
+#mapContainer.hidden {
+    height: 45%;
+}
+
+#chartContainer {
+    padding: 0 5px 0 5px;
+    transition: height 0.2s ease-out;
+    display: none;
+}
+
+#chartContainer.shown {
+    display: block;
+    height: 55%;
+}
+
+#btnClose {
+    float: right;
+}
+
+.grid line {
+    stroke: lightgrey;
+    stroke-opacity: 0.7;
+    shape-rendering: crispEdges;
+}
+
+.grid path {
+    stroke-width: 0;
+}
