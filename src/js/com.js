@@ -1,6 +1,6 @@
-async function get_available_stations() {
+async function get_available_stations(provider_id) {
     return new Promise(function (resolve, reject) {
-        var url = "https://europe-west6-sharedmobility.cloudfunctions.net/get_station_information"
+        var url = "https://europe-west6-sharedmobility.cloudfunctions.net/get_station_information?provider_id="+encodeURIComponent(provider_id)
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.open("GET", url, true);
         xmlhttp.onload = function () {
